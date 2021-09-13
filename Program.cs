@@ -42,6 +42,11 @@ namespace A1
 		/// <returns>True if subseq is a subsequence of seq and false otherise.</returns>
 		public static bool IsValidSubsequeuce(List<int> seq, List<int> subseq)
 		{
+			if (seq.Count == 0 || subseq.Count == 0)
+            {
+				return false;
+            }
+
 			foreach (int val in subseq)
 			{
 				if (seq.Contains(val) is false) // The moment there's a value in the subsequence not found in the sequence, the subsequence is invalid
